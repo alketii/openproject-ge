@@ -1,0 +1,21 @@
+CORE_VERSION='release/4.2'
+
+# plugin development dependencies start
+  gem "pdf-inspector", "~>1.0.0", :group => [:development, :test]
+# plugin development dependencies end
+
+
+
+group :opf_plugins do
+ gem "openproject-global_roles", path: "vendored-plugins/openproject-global_roles"
+ gem "openproject-help_link", path: "vendored-plugins/openproject-help_link"
+ gem "openproject-my_project_page", path: "vendored-plugins/openproject-my_project_page"
+ gem "openproject-documents", path: "vendored-plugins/openproject-documents"
+ gem "reporting_engine", path: "vendored-plugins/reporting_engine"
+ gem "openproject-costs", path: "vendored-plugins/openproject-costs"
+ gem "openproject-reporting", path: "vendored-plugins/openproject-reporting"
+ gem "openproject-meeting", path: "vendored-plugins/openproject-meeting"
+ gem "openproject-pdf_export", path: "vendored-plugins/openproject-pdf_export"
+ gem "openproject-backlogs", path: "vendored-plugins/openproject-backlogs"
+ gem "openproject-emoji", path: "vendored-plugins/openproject-emoji"
+end

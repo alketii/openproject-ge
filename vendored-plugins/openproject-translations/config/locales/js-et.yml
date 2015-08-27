@@ -1,0 +1,392 @@
+---
+et:
+  js:
+    ajax:
+      hide: Peida
+      loading: Laadimine...
+    close_popup_title: Close popup
+    button_add_watcher: Lisa jälgija
+    button_cancel: Tühista
+    button_check_all: Märgi kõik
+    button_copy: Kopeeri
+    button_delete: Kustuta
+    button_delete_watcher: Delete watcher
+    button_details_view: Details view
+    button_duplicate: Duplitseeri
+    button_edit: Muuda
+    button_filter: Filter
+    button_list_view: List view
+    button_log_time: Ajakulu
+    button_more: Rohkem
+    button_move: Tõsta
+    button_open_details: Open details view
+    button_quote: Tsiteeri
+    button_save: Salvesta
+    button_settings: Seaded
+    button_uncheck_all: Nulli valik
+    button_update: Uuenda
+    description_available_columns: Saadaolevad väljad
+    description_select_work_package: Vali teema
+    description_selected_columns: Valitud väljad
+    description_subwork_package: Teema sisaldub teises teemas
+    filter:
+      noneElement: "(ei midagi)"
+    general_text_no: ei
+    general_text_yes: jah
+    general_text_No: Ei
+    general_text_Yes: Jah
+    label_activate: Aktiveerimine
+    label_add_columns: Lisa valitud väljad
+    label_add_comment: Add comment
+    label_add_comment_title: Add your comments here
+    label_added_by: added by
+    label_added_time_by: Added by %{author} %{age}
+    label_ago: päeva tagasi
+    label_all: kõik
+    label_all_work_packages: kõik teemad
+    label_ascending: Kasvav
+    label_board_locked: Lukus
+    label_board_sticky: Külgejääv
+    label_date: Kuupäev
+    label_deactivate: Deactivate
+    label_descending: Kahanev
+    label_description: Kirjeldus
+    label_closed_work_packages: suletud
+    label_collapse: Koonda
+    label_collapsed: koondatud
+    label_collapse_all: Ahenda kõik
+    label_commented_on: commented on
+    label_contains: sisaldab
+    label_equals: võrdub
+    label_expand: Laienda
+    label_expanded: laiendatud
+    label_expand_all: Laienda kõik
+    label_export: Export
+    label_filename: Fail
+    label_filesize: Suurus
+    label_format_atom: Atom
+    label_format_csv: CSV
+    label_format_pdf: PDF
+    label_format_pdf_with_descriptions: PDF with descriptions
+    label_greater_or_equal: ">="
+    label_group_by: Group by
+    label_hide_attributes: Hide empty
+    label_hide_column: Hide column
+    label_in: sisaldub hulgas
+    label_in_less_than: on väiksem kui
+    label_in_more_than: on suurem kui
+    label_latest_activity: Latest Activity
+    label_last_updated_on: Last updated on
+    label_less_or_equal: "<="
+    label_less_than_ago: vähem kui päev tagasi
+    label_loading: Laadimine...
+    label_me: mina
+    label_menu_collapse: koonda
+    label_menu_expand: laienda
+    label_more_than_ago: vanem kui
+    label_next: Järgmine
+    label_no_data: Pole
+    label_no_due_date: no end date
+    label_no_start_date: no start date
+    label_none: pole
+    label_not_contains: ei sisalda
+    label_not_equals: ei ole
+    label_on: 'on'
+    label_open_menu: Ava menüü
+    label_open_work_packages: avatud
+    label_previous: Eelmine
+    label_per_page: 'Per page:'
+    label_remove_columns: Eemalda valitud väljad
+    label_save_as: Save as
+    label_select_watcher: Select a watcher...
+    label_selected_filter_list: Selected filters
+    label_share: Share
+    label_show_attributes: Näita kõiki
+    label_show_in_menu: Show page in menu
+    label_sort_by: Sorteeri
+    label_sorted_by: sorted by
+    label_sort_higher: Nihuta üles
+    label_sort_lower: Nihuta alla
+    label_sorting: Sorting
+    label_sum_for: Sum for
+    label_this_week: sel nädalal
+    label_today: täna
+    label_total_progress: "%{percent}% Total progress"
+    label_visible_for_others: Page visible for others
+    label_work_package: Teema
+    label_watch_work_package: Watch work package
+    label_watcher_added_successfully: Watcher successfully added!
+    label_watcher_deleted_successfully: Watcher successfully deleted!
+    label_work_package_details_you_are_here: You're on the %{tab} tab for %{type}
+      %{subject}.
+    label_unwatch_work_package: Unwatch work package
+    label_uploaded_by: Uploaded by
+    label_global_queries: Shared queries
+    label_custom_queries: Private queries
+    label_columns: Väljad
+    label_click_to_enter_description: Click to enter description...
+    text_are_you_sure: Kas oled kindel?
+    filter_labels:
+      assigned_to: Määratud tegija
+      assigned_to_role: Omistatud rollile
+      author: Autor
+      category: Kategooria
+      created_at: Loodud
+      done_ratio: "% valmis"
+      due_date: Tähtaeg
+      estimated_hours: Eeldatav ajakulu
+      fixed_version: Versioon
+      member_of_group: Omistatud rühmale
+      parent: Pärineb teemast
+      parent_issue: Pärineb teemast
+      parent_work_package: Pärineb teemast
+      priority: Prioriteet
+      progress: "% valmis"
+      project: Projekt
+      responsible: Vastutaja
+      spent_time: Kulutatud aeg
+      start_date: Alguskuupäev
+      status: Olek
+      subject: Teema
+      subproject: Alamprojekt
+      time_entries: Ajakulu
+      type: Liik
+      updated_at: Uuendatud
+      version: Versioon
+      watcher: Jälgija
+    relation_labels:
+      parent: Pärineb teemast
+      children: Children
+      relates: Related To
+      duplicates: Duplicates
+      duplicated: Duplicated by
+      blocks: Plokid
+      blocked: Blocked by
+      precedes: Precedes
+      follows: Follows
+    relation_buttons:
+      change_parent: Change parent
+      add_child: Add child
+      add_related_to: Add related to
+      add_duplicates: Add duplicates
+      add_duplicated_by: Add duplicated by
+      add_blocks: Add blocks
+      add_blocked_by: Add blocked by
+      add_precedes: Add precedes
+      add_follows: Add follows
+    field_value_enter_prompt: Enter a value for '%{field}'
+    select2:
+      input_too_short:
+        one: Sisesta veel üks märk
+        other: Sisesta veel {{count}} märki
+        zero: Please enter more characters
+      load_more: Laen rohkem tulemusi ...
+      no_matches: Vasteid ei leitud
+      searching: Otsing...
+      selection_too_big:
+        one: Sa saad teha ainult ühe valiku
+        other: Sa saad teha ainult {{limit}} valikut
+        zero: You cannot select any items
+    text_work_packages_destroy_confirmation: Oled Sa kindel oma soovis valitud teema(d)
+      kustutada?
+    text_query_destroy_confirmation: Are you sure you want to delete the selected
+      query?
+    timelines:
+      cancel: Tühista
+      change: Muudatus planeerimises
+      due_date: Tähtaeg
+      empty: "(tühi)"
+      error: Ilmnes tõrge.
+      errors:
+        not_implemented: Ajakava ei saa koostada, kuna see kasutab funktsiooni, mis
+          pole veel realiseeritud.
+        report_comparison: Ajakava ei saa kujutada konfigureeritud võrdlusi. Palun
+          kontrollige konfiguratsiooni vastavat jaotist, selle andmete algväärtustamine
+          võib aidata probleemi lahendada.
+        report_epicfail: Ajakava ei saa laadida ootamatu tõrke tõttu.
+        report_timeout: Ajakava ei saa laadida vastuvõetava aja jooksul.
+      filter:
+        column:
+          assigned_to: Määratud tegija
+          type: Liik
+          due_date: Lõppkuupäev
+          name: Nimi
+          status: Olek
+          responsible: Vastutaja
+          start_date: Alguskuupäev
+        grouping_other: Muu
+        noneSelection: "(ei midagi)"
+      name: Nimi
+      new_work_package: Uus teema
+      outline: Lähtesta kontuur
+      outlines:
+        aggregation: Näita ainult summeeritult
+        level1: Laienda tasemele 1
+        level2: Laienda tasemele 2
+        level3: Laienda tasemele 3
+        level4: Laienda tasemele 4
+        level5: Laienda tasemele 5
+        all: Näita kõiki
+      project_status: Projekti olek
+      project_type: Projekti tüüp
+      really_close_dialog: Do you really want to close the dialog and lose the entered
+        data?
+      responsible: Vastutaja
+      save: Salvesta
+      start_date: Alguskuupäev
+      tooManyProjects: Rohkem kui %{count} projekti. Palun kasuta paremat filtrit!
+      zoom:
+        in: Vaata lähemalt
+        out: Vaata kaugemalt
+        days: Päevad
+        weeks: Nädalad
+        months: Kuud
+        quarters: Kvartalid
+        years: Aastad
+        slider: Suumiliugur
+    tl_toolbar:
+      zooms: Suumi tase
+      outlines: Hierarhia tase
+    unsupported_browser:
+      title: Your browser version is not supported
+      message: The browser version you are using is no longer supported by OpenProject.
+        Please update your browser.
+      learn_more: Lisateave
+    wiki_formatting:
+      strong: Strong
+      italic: Italic
+      underline: Underline
+      deleted: Deleted
+      code: Inline Code
+      heading1: Heading 1
+      heading2: Heading 2
+      heading3: Heading 3
+      unordered_list: Unordered List
+      ordered_list: Ordered List
+      quote: Tsiteeri
+      unquote: Unquote
+      preformatted_text: Preformatted Text
+      wiki_link: Link to a Wiki page
+      image: Image
+    work_packages:
+      button_clear: Tühjenda
+      description_filter: Filter
+      description_enter_text: Sisestage tekst
+      description_options_hide: Hide options
+      description_options_show: Show options
+      error: Ilmnes tõrge.
+      label_enable_multi_select: Enable multiselect
+      label_disable_multi_select: Disable multiselect
+      label_filter_add: Lisa filter
+      label_options: Valikud
+      label_column_multiselect: 'Combined dropdown field: Select with arrow keys,
+        confirm selection with enter, delete with backspace'
+      label_column_select: 'Status - Combined dropdown field: Selection with auto-completion.'
+      message_error_during_bulk_delete: An error occurred while trying to delete work
+        packages.
+      message_successful_bulk_delete: Successfully deleted work packages.
+      no_results:
+        title: No work packages to display
+        description_html: "<p>Either none have been created or all work packages are
+          filtered out.</p>"
+      property_groups:
+        details: "Üksikasjad"
+        people: People
+        estimatesAndTime: Estimates & Time
+        other: Muu
+      properties:
+        assignee: Määratud tegija
+        author: Autor
+        createdAt: Loodud
+        description: Kirjeldus
+        date: Kuupäev
+        dueDate: Tähtaeg
+        estimatedTime: Eeldatav ajakulu
+        spentTime: Kulutatud aeg
+        category: Kategooria
+        percentageDone: Percentage done
+        priority: Prioriteet
+        projectName: Projekt
+        responsible: Vastutaja
+        startDate: Alguskuupäev
+        status: Olek
+        subject: Teema
+        title: Pealkiri
+        type: Liik
+        updatedAt: Uuendatud
+        versionName: Versioon
+        version: Versioon
+      query:
+        column_names: Väljad
+        group_by: Grupeeri tulemused
+        group: Group by
+        sort_ascending: Sort ascending
+        sort_descending: Sort descending
+        move_column_left: Move column left
+        move_column_right: Move column right
+        hide_column: Hide column
+        insert_columns: Insert columns ...
+        filters: Filtrid
+        display_sums: Kuva summasid
+        errors:
+          unretrievable_query: Unable to retrieve query from URL
+      tabs:
+        overview: "Ülevaade"
+        activity: Tegevus
+        relations: Relations
+        watchers: Jälgijad
+        attachments: Manused
+      time_relative:
+        days: päeva
+        weeks: nädalat
+        months: kuud
+    toolbar:
+      settings:
+        columns: Columns ...
+        sort_by: Sort by ...
+        group_by: Group by ...
+        display_sums: Display sums
+        hide_sums: Hide sums
+        save: Salvesta
+        save_as: Save as ...
+        export: Export ...
+        share: Share ...
+        page_settings: Rename query ...
+        delete: Kustuta
+      filter: Filter
+      unselected_title: Teemad
+    modals:
+      label_settings: Rename query
+      label_name: Nimi
+      label_delete_page: Delete current page
+      button_apply: Rakenda
+      button_save: Salvesta
+      button_submit: Sisesta
+      button_cancel: Tühista
+    notice_successful_create: Loomine õnnestus.
+    notice_successful_delete: Kustutamine õnnestus.
+    notice_successful_update: Uuendamine õnnestus.
+    notice_bad_request: Vigane päring.
+    relations:
+      empty: No relation exists
+      delete: Kustuta seos
+    inplace:
+      button_edit: "%{attribute}: Edit"
+      button_save: "%{attribute}: Save"
+      button_save_and_send: "%{attribute}: Save and send email"
+      button_cancel: "%{attribute}: Cancel"
+      link_formatting_help: Tekstivormindamise abi
+      btn_preview_enable: Eelvaade
+      btn_preview_disable: Disable preview
+      null_value_label: No value
+      clear_value_label: "-"
+      errors:
+        required: "%{field} cannot be empty"
+        number: "%{field} is not a valid number"
+    error_could_not_resolve_version_name: Couldn't resolve version name
+    error_could_not_resolve_user_name: Couldn't resolve user name
+    units:
+      hour:
+        one: 1 hour
+        other: "%{count} hours"
+        zero: 0 hours

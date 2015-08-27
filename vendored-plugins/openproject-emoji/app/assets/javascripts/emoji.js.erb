@@ -1,0 +1,73 @@
+<%#-- copyright
+Copyright (C) 2014 Philipp Tessenow
+
+This program is free software; you can redistribute it and/or
+modify it under the terms of the GNU General Public License version 3.
+
+You should have received a copy of the GNU General Public License
+along with this program; if not, write to the Free Software
+Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
+
+See doc/COPYRIGHT.md for more details.
+
+++#%>
+
+<% require_asset 'classList.js' %>
+<% require_asset 'emojify' %>
+
+jQuery(function ($) {
+  emojify.setConfig({
+    emojify_tag_type  : 'div',                        // Only run emojify.js on this element
+    emoticons_enabled : true,                         // enable emoticons
+    only_crawl_id     : null,                         // Use to restrict where emojify.js applies
+    img_dir           : '<%= image_path 'emojis' %>', // Directory for emoji images
+    ignored_tags      : {                             // Ignore the following tags
+        'SCRIPT'  : 1,
+        'TEXTAREA': 1,
+        'PRE'     : 1,
+        'CODE'    : 1
+    }
+  });
+
+  // autocomplete emojis in textareas
+  function enable_emoji_textarea_auto_completion(textareas) {
+    var emojis_list = $.map(emojify.emojiNames, function(value, i) {
+      return {'id':i, 'name':value};
+    });
+    textareas.each(function(){
+      if (jQuery(this).attr('id') == 'export_card_configuration_rows') {
+        // do not offer auto-completion for the openproject_pdf-export gem' card configuration
+        // text area, because it wants YAML data (containing lots of colons) which
+        // is cumbersome to enter when we auto-complete those all the time
+        return;
+      }
+      if (jQuery(this).data('emoji-completion') != 'on') {
+        jQuery(this).data('emoji-completion', 'on');
+        jQuery(this).atwho({
+          at: ':',
+          start_with_space: true,
+          data: emojify.emojiNames,
+          tpl: "<li data-value=':${name}:'><img src='<%= image_path 'emojis' %>/${name}.png' height='20' width='20'/> ${name} </li>"
+        });
+      }
+    });
+  }
+
+  var timeout_id = undefined;
+  function setup_emojis() {
+    if (timeout_id !== undefined) { clearTimeout(timeout_id) };
+    timeout_id = setTimeout(function(){
+      emojify.run();
+      enable_emoji_textarea_auto_completion($('textarea.wiki-edit'));
+    },0);
+  }
+
+  $(document).bind('DOMNodeInserted', function(event){ setup_emojis(); });
+
+  // In elements with the text-diff class openproject might show unrendered
+  // markup (textile, markdown, ..). We don't emojify that to avoid unwanted
+  // emoticons.
+  $('.text-diff').addClass('no-emojify');
+
+  setup_emojis();
+});
