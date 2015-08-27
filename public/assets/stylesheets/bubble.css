@@ -1,0 +1,66 @@
+div.bubble
+{
+	position: relative;
+	/*line-height: 100px;*/
+	background-color: #fff;
+	border: 1px solid #666;
+	-webkit-border-radius: 15px;
+	-moz-border-radius: 15px;
+	border-radius: 15px;
+	-webkit-box-shadow: 2px 2px 2px #888;
+	-moz-box-shadow: 2px 2px 2px #888;
+	box-shadow: 2px 2px 2px #888;
+
+	margin: 10px;
+	padding: 10px;
+}
+
+div.bubble_reply
+{
+        position: relative;
+        /*line-height: 100px;*/
+        background-color: #fff;
+        border: 1px solid #666;
+        -webkit-border-radius: 15px;
+        -moz-border-radius: 15px;
+        border-radius: 15px;
+        -webkit-box-shadow: 2px 2px 2px #888;
+        -moz-box-shadow: 2px 2px 2px #888;
+        box-shadow: 2px 2px 2px #888;
+
+        margin: 10px;
+        padding: 10px;
+}
+
+
+div.bubble_reply {
+    margin-left: 60px;
+    margin-top: -45px;
+}
+div.bubble_reply:before {
+    content:"";
+    position:absolute;
+    right: 100%;
+    top: 10px;
+    width: 0px;
+    height: 0px;
+    border-top: 14px inset transparent;
+    border-right: 20px dashed #333333;
+    border-bottom: 14px inset transparent;
+}
+div.bubble_reply:after {
+    content:"";
+    position:absolute;
+    right: 100%;
+    top: 11px;
+    width: 0px;
+    height: 0px;
+    border-top: 13px inset transparent;
+    border-right: 19px dashed #fff;
+    border-bottom: 13px inset transparent;
+}
+
+
+div.wiki {
+	font-size: 15px !important;
+}
