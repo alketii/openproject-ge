@@ -104,6 +104,7 @@ class Project < ActiveRecord::Base
   validates_associated :repository, :wiki
   validates_length_of :name, maximum: 255
   validates_length_of :homepage, maximum: 255
+  validates_length_of :display_language, :maximum => 11
   validates_length_of :identifier, in: 1..IDENTIFIER_MAX_LENGTH
   # downcase letters, digits, dashes but not digits only
   validates_format_of :identifier, with: /\A(?!\d+$)[a-z0-9\-_]*\z/,
@@ -751,6 +752,7 @@ class Project < ActiveRecord::Base
                   'description',
                   'summary',
                   'homepage',
+                  'display_language',
                   'is_public',
                   'identifier',
                   'custom_field_values',
