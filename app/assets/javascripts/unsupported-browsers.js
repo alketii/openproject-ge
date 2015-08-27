@@ -35,7 +35,7 @@
         agent.match(/Firefox\/(([1-2][0-9]|30)\.)/) === null) { // Firefox 10-30
       return;
     }
-
+    return;
     $().topShelf({
       title: I18n.t("js.unsupported_browser.title"),
       message: I18n.t("js.unsupported_browser.message"),
