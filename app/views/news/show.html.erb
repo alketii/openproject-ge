@@ -27,7 +27,7 @@ See doc/COPYRIGHT.rdoc for more details.
 
 ++#%>
 
-<link href="/bubble.css" media="all" rel="stylesheet" />
+<link href="/assets/stylesheets/bubble.css" media="all" rel="stylesheet" />
 
 <%= toolbar title: "#{avatar(@news.author)}  #{h @news.title}" do %>
   <% if User.current.allowed_to?(:manage_news, @project) %>
