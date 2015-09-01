@@ -27,6 +27,8 @@ See doc/COPYRIGHT.rdoc for more details.
 
 ++#%>
 
+<link href="/bubble.css" media="all" rel="stylesheet" />
+
 <%= toolbar title: "#{avatar(@news.author)}  #{h @news.title}" do %>
   <% if User.current.allowed_to?(:manage_news, @project) %>
     <%= link_to(edit_news_path(@news),
@@ -86,8 +88,10 @@ See doc/COPYRIGHT.rdoc for more details.
                               :title   => l(:button_delete),
                               :alt     => l(:button_delete) %>
       </div>
-      <h4 class="comment"><%= avatar(comment.author) %><%= authoring comment.created_on, comment.author %></h4>
-      <%= format_text(comment.comments, :object => comment) %>
+      <h4 class="comment"><%= authoring comment.created_on, comment.author %></h4>
+      <div class="bubble_reply"><div class="wiki" ng-non-bindable>
+        <%= format_text(comment.comments, :object => comment) %>
+      </div></div><br>
     <% end %>
   </div>
   <% if authorize_for 'news/comments', 'create' %>
