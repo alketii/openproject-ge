@@ -30,6 +30,8 @@
 # Load the rails application
 require File.expand_path('../application', __FILE__)
 
+ENV['RAILS_ENV'] ||= 'production'
+
 SimpleBenchmark.bench 'Application.initialize!' do
   # Initialize the rails application
   OpenProject::Application.initialize!

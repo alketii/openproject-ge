@@ -76,6 +76,9 @@ module OpenProject
     # Application configuration should go into files in config/initializers
     # -- all .rb files in that directory are automatically loaded.
 
+    # Force into production mode by defailt
+    Rails.env = ActiveSupport::StringInquirer.new('production')
+
     config.middleware.swap ActionDispatch::ParamsParser,
                            'ParamsParserWithExclusion',
                            exclude: -> (env) {
