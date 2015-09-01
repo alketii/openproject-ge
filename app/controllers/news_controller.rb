@@ -69,6 +69,17 @@ class NewsController < ApplicationController
     @news.safe_attributes = params[:news]
     if @news.save
       flash[:notice] = l(:notice_successful_create)
+      
+
+      if params[:news][:copy_to_subprojects] then
+      params[:news][:copy_to_subprojects] = @news.id
+      @project.children.each do |subproject|
+         @news = News.new(:project => subproject, :author => User.current)
+         @news.safe_attributes = params[:news]
+         @news.save
+       end
+      end
+      
       redirect_to controller: '/news', action: 'index', project_id: @project
     else
       render action: 'new'

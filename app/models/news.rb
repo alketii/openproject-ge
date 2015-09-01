@@ -56,7 +56,7 @@ class News < ActiveRecord::Base
                       conditions: Project.allowed_to_condition(args.first || User.current, :view_news)
                     }}
 
-  safe_attributes 'title', 'summary', 'description'
+  safe_attributes 'title', 'summary', 'description', 'copy_to_subprojects'
 
   def visible?(user = User.current)
     !user.nil? && user.allowed_to?(:view_news, project)

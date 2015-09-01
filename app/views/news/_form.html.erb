@@ -38,4 +38,7 @@ See doc/COPYRIGHT.rdoc for more details.
                 :'data-wp_autocomplete_url' => work_packages_auto_complete_path(:project_id => @project, :format => :json),
                 :'ng-non-bindable' => '' %>
 </div>
+<div class="form--field">
+  <%= f.check_box :copy_to_subprojects %>
+</div>
 <%= wikitoolbar_for 'news_description' %>
