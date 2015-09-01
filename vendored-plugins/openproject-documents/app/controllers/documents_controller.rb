@@ -70,6 +70,16 @@ class DocumentsController < ApplicationController
     if @document.save
       attachments = Attachment.attach_files(@document, params[:attachments])
       render_attachment_warning_if_needed(@document)
+      
+      if params[:document][:copy_to_subprojects] then
+         params[:document][:copy_to_subprojects] = @document.id
+         @project.children.each do |subproject|
+            @document = subproject.documents.build
+            @document.safe_attributes = params[:document]
+            @document.save
+         end
+      end
+      
       flash[:notice] = l(:notice_successful_create)
       redirect_to project_documents_path(@project)
     else
