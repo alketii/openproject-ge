@@ -32,18 +32,18 @@
 en:
   activerecord:
     models:
-      document: "Document"
+      document: "File"
 
   default_doc_category_tech: "Technical documentation"
   default_doc_category_user: "User documentation"
 
-  enumeration_doc_categories: "Document categories"
+  enumeration_doc_categories: "File categories"
 
-  label_document_added: "Document added"
-  label_document_new: "New document"
-  label_document_plural: "Documents"
-  label_documents: "Documents"
+  label_document_added: "File uploaded"
+  label_document_new: "Upload file"
+  label_document_plural: "Downloads"
+  label_documents: "Downloads"
 
-  permission_manage_documents: "Manage documents"
-  permission_view_documents: "View documents"
-  project_module_documents: "Documents"
+  permission_manage_documents: "Manage files"
+  permission_view_documents: "View files"
+  project_module_documents: "Downloads"

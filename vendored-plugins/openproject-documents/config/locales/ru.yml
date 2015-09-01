@@ -1,14 +1,14 @@
 ru:
   activerecord:
     models:
-      document: Документ
+      document: Файл
   default_doc_category_tech: Техническая документация
   default_doc_category_user: Документация пользователя
-  enumeration_doc_categories: Категории документов
-  label_document_added: Добавленные документы
-  label_document_new: Новый документ
-  label_document_plural: Документы
-  label_documents: Документы
-  permission_manage_documents: Управление документами
-  permission_view_documents: Просмотр документов
-  project_module_documents: Документы
+  enumeration_doc_categories: Категории загрузок
+  label_document_added: Добавленные загрузки
+  label_document_new: Добавить файл
+  label_document_plural: Загрузки
+  label_documents: Загрузки
+  permission_manage_documents: Управление файлами
+  permission_view_documents: Просмотр файлом
+  project_module_documents: Загрузки
