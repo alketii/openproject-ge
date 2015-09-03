@@ -19,14 +19,18 @@ module OpenProject::WikiExtension
               w = args[1]
               h = args[2]
             end
-            html = "<iframe type=\"text/html\" width=\"".html_safe
-            html << w
-            html << "\" height=\"".html_safe
-            html << h
-            html << "\" src=\"".html_safe
-            html << url
-            html << "\" frameborder=\"0\"></iframe>".html_safe
-            html
+            if url.start_with?('https://www.youtube.com/embed/') or url.start_with?('https://player.vimeo.com/video/')
+              html = "<iframe type=\"text/html\" width=\"".html_safe
+              html << w
+              html << "\" height=\"".html_safe
+              html << h
+              html << "\" src=\"".html_safe
+              html << url
+              html << "\" frameborder=\"0\"></iframe>".html_safe
+              html
+            else
+              "<pre>Embeded link does not belong to YouTube nor Vimeo!</pre>".html_safe
+            end
           else
             "<pre>Video macro error, check your syntax!</pre>".html_safe
           end
