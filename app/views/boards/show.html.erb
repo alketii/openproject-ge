@@ -83,12 +83,12 @@ See doc/COPYRIGHT.rdoc for more details.
       </thead>
       <tbody>
         <tr ng-repeat="message in messages">
+          <td aligh="center"><span class="icon-context icon-quote"></span></td>
           <td class="subject">
             <icon-wrapper ng-if="message.isSticky == true" icon-name="book2" icon-title="{{I18n.t('js.label_board_sticky')}}"></icon-wrapper>
             <icon-wrapper ng-if="message.isLocked == true" icon-name="locked" icon-title="{{I18n.t('js.label_board_locked')}}"></icon-wrapper>
             <a ng-href="{{PathHelper.messagePath(message.id)}}">{{message.subject}}</a>
           </td>
-          <td aligh="center"><span class="icon-context icon-quote"></span></td>
           <td class="author"><a ng-href="{{PathHelper.userPath(message.author.id)}}">{{message.author.name}}</a></td>
           <td class="created_on" date-time date-time-value="message.created_on"></td>
           <td class="replies">{{message.replies_count}}</td>
