@@ -28,7 +28,7 @@ See doc/COPYRIGHT.rdoc for more details.
 ++*/
 
 .CodeRay {
-  background-color: hsl(0,0%,95%);
+  /* background-color: hsl(0,0%,95%); */
   border: 1px solid silver;
   color: black;
 }

@@ -224,14 +224,20 @@ module OpenProject
             end
             # check if page exists
             wiki_page = link_project.wiki.find_page(page)
+            strike_begin="<strike>"                                                  
+            strike_end="</strike>"
             url = case options[:wiki_links]
               when :local; "#{title}.html"
               when :anchor; "##{title}"   # used for single-file wiki export
               else
                 wiki_page_id = page.present? ? Wiki.titleize(page) : nil
+                if wiki_page.present?                                                
+                   strike_begin=""                                                   
+                   strike_end=""                                                     
+                end    
                 url_for(only_path: only_path, controller: '/wiki', action: 'show', project_id: link_project, id: wiki_page_id, anchor: anchor)
               end
-            link_to(h(title || page), url, class: ('wiki-page' + (wiki_page ? '' : ' new')))
+            strike_begin+link_to(h(title || page), url, class: ('wiki-page' + (wiki_page ? '' : ' new')))+strike_end
           else
             # project or wiki doesn't exist
             all
