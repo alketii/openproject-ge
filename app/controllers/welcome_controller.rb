@@ -31,6 +31,7 @@ class WelcomeController < ApplicationController
   def index
     @news     = current_user.latest_news
     @projects = current_user.latest_projects
+    redirect_to controller: '/projects', action: 'godot-engine'
   end
 
   def robots
