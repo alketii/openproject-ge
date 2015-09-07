@@ -48,7 +48,7 @@ See doc/COPYRIGHT.md for more details.
         <% end %>
       </div>
       <div id="<%= block_name %>-preview-div" class="wiki">
-        <% if User.current.logged? %>
+        <% if User.current.logged? and User.current.admin? %>
         <div class="box-actions">
           <a href="#" class="icon icon-edit edit-textilizable" data-block-name="<%= block_name %>"><%= l(:button_edit) %></a>
 

@@ -23,7 +23,7 @@ See doc/COPYRIGHT.md for more details.
 
   <% block_name_id = "my_page_#{block_name}_box_actions" %>
   <% content_for block_name_id do %>
-    <% if User.current.logged? %>
+    <% if User.current.logged? and User.current.admin? %>
     <div class="box-actions">
       <%= link_to_remote l(:button_delete), {
             :confirm => l(:label_confirm_delete),
