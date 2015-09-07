@@ -1332,7 +1332,7 @@ ru:
   project_module_repository: "Репозиторий"
   project_module_time_tracking: "Отслеживание времени"
   project_module_timelines: "Графики"
-  project_module_wiki: Wiki
+  project_module_wiki: Документация
   query_fields:
     assigned_to_role: "Роль назначенного"
     member_of_group: "Группа назначенного"
