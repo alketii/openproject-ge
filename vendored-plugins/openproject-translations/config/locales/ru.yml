@@ -287,7 +287,7 @@ ru:
       project_type: "Тип проекта"
       user: "Пользователь"
       version: "Версия"
-      wiki: Документация
+      wiki: Wiki
       wiki_page: Wiki-страница
       workflow: "Рабочий поток"
       work_package: "Пакет работ"
@@ -1332,7 +1332,7 @@ ru:
   project_module_repository: "Репозиторий"
   project_module_time_tracking: "Отслеживание времени"
   project_module_timelines: "Графики"
-  project_module_wiki: Документация
+  project_module_wiki: Wiki
   query_fields:
     assigned_to_role: "Роль назначенного"
     member_of_group: "Группа назначенного"
