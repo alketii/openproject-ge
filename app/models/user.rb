@@ -137,8 +137,6 @@ class User < Principal
   attr_accessor :last_before_login_on
 
   validates_presence_of :login,
-                        :firstname,
-                        :lastname,
                         :mail,
                         unless: Proc.new { |user| user.is_a?(AnonymousUser) || user.is_a?(DeletedUser) || user.is_a?(SystemUser) }
 
