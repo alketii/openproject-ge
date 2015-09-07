@@ -48,6 +48,7 @@ See doc/COPYRIGHT.md for more details.
         <% end %>
       </div>
       <div id="<%= block_name %>-preview-div" class="wiki">
+        <% if User.current.logged? %>
         <div class="box-actions">
           <a href="#" class="icon icon-edit edit-textilizable" data-block-name="<%= block_name %>"><%= l(:button_edit) %></a>
 
@@ -58,6 +59,7 @@ See doc/COPYRIGHT.md for more details.
               }
               %>
         </div>
+        <% end %>
       </div>
     <% end %>
     <%= render :partial => "textilizable",
