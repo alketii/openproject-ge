@@ -26,6 +26,35 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
 See doc/COPYRIGHT.rdoc for more details.
 
 ++#%>
+
+<style>
+.fade_out {
+    position: relative; 
+    bottom: 4em;
+    height: 4em;
+    background: -webkit-linear-gradient(
+        rgba(255, 255, 255, 0) 0%,
+        rgba(255, 255, 255, 1) 100%
+    ); 
+    background-image: -moz-linear-gradient(
+        rgba(255, 255, 255, 0) 0%,
+        rgba(255, 255, 255, 1) 100%
+    );
+    background-image: -o-linear-gradient(
+        rgba(255, 255, 255, 0) 0%,
+        rgba(255, 255, 255, 1) 100%
+    );
+    background-image: linear-gradient(
+        rgba(255, 255, 255, 0) 0%,
+        rgba(255, 255, 255, 1) 100%
+    );
+    background-image: -ms-linear-gradient(
+        rgba(255, 255, 255, 0) 0%,
+        rgba(255, 255, 255, 1) 100%
+    );
+}
+</style>
+
 <% html_title(l(:label_news_plural)) -%>
 <%= toolbar title: l(:label_news_plural) do %>
   <% if User.current.allowed_to?(:manage_news, @project) %>
@@ -47,7 +76,8 @@ See doc/COPYRIGHT.rdoc for more details.
     <p class="author"><%= authoring news.created_on, news.author %></p>
     <div class="wiki">
       <%= format_text(news.summary.present? ? news.summary : news.description, :object => news) %>
-      <%= format_text(truncate(news.description), :object => news) %>                                                                                    
+      <%= format_text(truncate_lines(news.description), :object => news) %>
+      <div class="fade_out"></div>
       <%= link_to l(:label_news_more), news_path(news) %>
     </div>
   <% end %>

@@ -866,6 +866,7 @@ ru-UA:
   label_news_edit: "Редактировать Новости"
   label_news_plural: "Новости"
   label_news_view_all: "Посмотреть все новости"
+  label_news_more: "Посмотреть полностью"
   label_next: "Следующии"
   label_next_week: "На следующей неделе"
   label_no_change_option: "(Без изменений)"
