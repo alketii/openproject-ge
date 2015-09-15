@@ -47,7 +47,8 @@ See doc/COPYRIGHT.rdoc for more details.
     <p class="author"><%= authoring news.created_on, news.author %></p>
     <div class="wiki">
       <%= format_text(news.summary.present? ? news.summary : news.description, :object => news) %>
-      <%= format_text(truncate(@news.description), :object => @news) %> ...
+      <%= format_text(truncate(news.description), :object => news) %>                                                                                    
+      <%= link_to l(:label_news_more), news_path(news) %>
     </div>
   <% end %>
 <% end %>
