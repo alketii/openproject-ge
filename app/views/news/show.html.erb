@@ -68,10 +68,11 @@ See doc/COPYRIGHT.rdoc for more details.
     <div id="preview"></div>
   </div>
 <% end %>
-<p><% unless @news.summary.blank? %><em><%=h @news.summary %></em><br />
-  <% end %>
+<p>
   <span class="author"><%= authoring @news.created_on, @news.author %></span></p>
 <div class="wiki" ng-non-bindable>
+  <% unless @news.summary.blank? %><%=h format_text(@news.summary, :object=> @news) %>
+  <% end %>
   <%= format_text(@news.description, :object => @news) %>
 </div>
 <br />

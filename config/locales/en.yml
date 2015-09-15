@@ -867,6 +867,7 @@ en:
   label_news_edit: "Edit news"
   label_news_plural: "News"
   label_news_view_all: "View all news"
+  label_news_plural: "Continue reading"
   label_next: "Next"
   label_next_week: "Next week"
   label_no_change_option: "(No change)"
