@@ -30,8 +30,8 @@ See doc/COPYRIGHT.rdoc for more details.
 <style>
 .fade_out {
     position: relative; 
-    bottom: 4em;
-    height: 4em;
+    bottom: 2em;
+    height: 2em;
     background: -webkit-linear-gradient(
         rgba(255, 255, 255, 0) 0%,
         rgba(255, 255, 255, 1) 100%
@@ -75,10 +75,10 @@ See doc/COPYRIGHT.rdoc for more details.
       <%= "(#{l(:label_x_comments, :count => news.comments_count)})" if news.comments_count > 0 %></h3>
     <p class="author"><%= authoring news.created_on, news.author %></p>
     <div class="wiki">
-      <%= format_text(news.summary.present? ? news.summary : news.description, :object => news) %>
+      <%= format_text(news.summary.present? ? news.summary : nil, :object => news) %>
       <%= format_text(truncate_lines(news.description), :object => news) %>
       <div class="fade_out"></div>
-      <%= link_to l(:label_news_more), news_path(news) %>
+      <%= link_to l(:label_news_more), news_path(news) %><br>
     </div>
   <% end %>
 <% end %>
