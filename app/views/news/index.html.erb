@@ -29,9 +29,10 @@ See doc/COPYRIGHT.rdoc for more details.
 
 <style>
 .fade_out {
+    pointer-events:none;
     position: relative; 
-    bottom: 2em;
-    height: 2em;
+    bottom: 6em;
+    height: 6em;
     background: -webkit-linear-gradient(
         rgba(255, 255, 255, 0) 0%,
         rgba(255, 255, 255, 1) 100%
@@ -77,8 +78,7 @@ See doc/COPYRIGHT.rdoc for more details.
     <div class="wiki">
       <%= format_text(news.summary.present? ? news.summary : nil, :object => news) %>
       <%= format_text(truncate_lines(news.description), :object => news) %>
-      <div class="fade_out"></div>
-      <%= link_to l(:label_news_more), news_path(news) %><br>
+      <div class="fade_out"><br><br><br><br><%= link_to l(:label_news_more), news_path(news) %></div>
     </div>
   <% end %>
 <% end %>
