@@ -78,7 +78,9 @@ See doc/COPYRIGHT.rdoc for more details.
     <div class="wiki">
       <%= format_text(news.summary.present? ? news.summary : nil, :object => news) %>
       <%= format_text(truncate_lines(news.description), :object => news) %>
-      <div class="fade_out"><br><br><br><br><%= link_to l(:label_news_more), news_path(news) %></div>
+      <div class="fade_out"><br><br><br><br>
+      <div style="pointer-events:all;"><%= link_to l(:label_news_more), news_path(news) %></div>
+      </div>
     </div>
   <% end %>
 <% end %>
