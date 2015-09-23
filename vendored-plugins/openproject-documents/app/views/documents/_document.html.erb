@@ -34,6 +34,11 @@ See doc/COPYRIGHT.rdoc for more details.
 <p><em><%= format_time(document.updated_on) %></em></p>
 
 <div class="wiki">
+	<% if document.child_of %>
+	<% root_document = Document.find(document.child_of) %>
+	<%= textilizable(root_document.description) %>
+	<% end %>
+
 	<%= textilizable(document.description) %>
 </div>
 <br>

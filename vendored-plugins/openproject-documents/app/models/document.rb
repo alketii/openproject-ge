@@ -58,7 +58,7 @@ class Document < ActiveRecord::Base
 
   attr_accessible :title, :description, :copy_to_subprojects, :project, :category, :category_id
 
-  safe_attributes 'category_id', 'title', 'description', 'copy_to_subprojects'
+  safe_attributes 'category_id', 'title', 'description', 'copy_to_subprojects', 'child_of'
 
   def visible?(user=User.current)
     !user.nil? && user.allowed_to?(:view_documents, project)
