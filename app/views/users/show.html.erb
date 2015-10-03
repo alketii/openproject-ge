@@ -79,6 +79,10 @@ See doc/COPYRIGHT.rdoc for more details.
       </h3>
       <p>
         <%=l(:label_reported_work_packages)%>: <%= @user.reported_work_package_count %>
+        <br>
+        <%=l(:label_message_plural)%>: <%= ActiveRecord::Base.connection.execute("SELECT COUNT(*) FROM messages WHERE author_id = "+@user.id.to_s+";").first.first %>
+        <br>
+        <%=l(:label_topic_plural)%>: <%= ActiveRecord::Base.connection.execute("SELECT COUNT(*) FROM messages WHERE parent_id IS NOT NULL AND author_id = "+@user.id.to_s+";").first.first %>
       </p>
       <div id="activity">
         <% @events_by_day.keys.sort.reverse.each do |day| %>
