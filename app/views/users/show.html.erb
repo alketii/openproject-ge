@@ -82,7 +82,7 @@ See doc/COPYRIGHT.rdoc for more details.
         <br>
         <%=l(:label_message_plural)%>: <%= ActiveRecord::Base.connection.execute("SELECT COUNT(*) FROM messages WHERE author_id = "+@user.id.to_s+";").first.first %>
         <br>
-        <%=l(:label_topic_plural)%>: <%= ActiveRecord::Base.connection.execute("SELECT COUNT(*) FROM messages WHERE parent_id IS NOT NULL AND author_id = "+@user.id.to_s+";").first.first %>
+        <%=l(:label_topic_plural)%>: <%= ActiveRecord::Base.connection.execute("SELECT COUNT(*) FROM messages WHERE parent_id IS NULL AND author_id = "+@user.id.to_s+";").first.first %>
       </p>
       <div id="activity">
         <% @events_by_day.keys.sort.reverse.each do |day| %>
