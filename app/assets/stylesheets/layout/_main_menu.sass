@@ -58,7 +58,6 @@ $toggler-width: 40px
   width: $main-menu-width
   float: left
   left: 0
-  background-color: $main-menu-bg-color
   @include default-transition
 
   %absolute-layout-mode &
@@ -81,6 +80,7 @@ $toggler-width: 40px
 
         .main-item-wrapper
           +toggle-menu-item-background
+          +background-image(linear-gradient(to bottom, #ffffff 0%, #f5f5f5 100%))
 
           // left item border hover / selected effect
           &:hover > a:not(.toggler)
@@ -88,7 +88,7 @@ $toggler-width: 40px
 
           // placeholder for highlighted left-item-border
           a:not(.toggler)
-            border-left: $main-menu-selected-hover-indicator-width solid $main-menu-bg-color
+            border-left: $main-menu-selected-hover-indicator-width solid $primary-color
 
             &.selected
               +highlight-left-item-border
@@ -127,7 +127,8 @@ $toggler-width: 40px
       display: none
       padding-top: 1px
       padding-bottom: 1px
-      background-color: $main-menu-child-menu-bg-color
+      +background-image(linear-gradient(to bottom, rgba(59, 75, 91, 0) 0%, $main-menu-bg-color 100%))
+      border-left: 4px solid $primary-color
       padding: 0
       &.unattached
         border-top: 1px solid #ddd
@@ -180,7 +181,7 @@ $toggler-width: 40px
     border-left: none
     height: $main-menu-item-height - $main-menu-item-border-width
     width: $main-menu-width - $main-menu-item-border-width
-    background-color: $main-menu-bg-color
+    background-color: $breadcrumb-bg-color
     @include default-transition
     &:hover
       background: $main-menu-bg-hover-selected-background
