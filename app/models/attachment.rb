@@ -75,7 +75,12 @@ class Attachment < ActiveRecord::Base
   end
 
   def deletable?(user = User.current)
-    container.attachments_deletable?(user)
+    if User.current and @attachment.author_id == User.current.id
+      return true
+    else
+      return false
+    end
+    # container.attachments_deletable?(user)
   end
 
   # images are sent inline
