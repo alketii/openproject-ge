@@ -88,8 +88,7 @@ gem 'rack-protection', :git => "https://github.com/finnlabs/rack-protection.git"
 # https://github.com/kickstarter/rack-attack
 gem 'rack-attack'
 
-gem 'syck', :platforms => [:mri, :mingw, :x64_mingw], :require => false
-
+gem "syck", '~> 1.0.5', require: false
 gem 'gon', '~> 4.0'
 
 # catch exceptions and send them to any airbrake compatible backend
@@ -102,8 +101,10 @@ group :production do
   gem 'dalli', '~> 2.7.2'
 end
 
-gem 'sprockets',        git: 'https://github.com/tessi/sprockets.git', branch: '2_2_2_backport2'
-gem 'sprockets-rails',  git: 'https://github.com/finnlabs/sprockets-rails.git', branch: 'backport'
+gem 'sprockets',       git: 'https://github.com/finnlabs/sprockets.git',
+                       branch: '2_2_3_backport2'
+gem 'sprockets-rails', git: 'https://github.com/finnlabs/sprockets-rails.git',
+                       branch: 'backport_w_2_2_3_sprockets'
 gem 'non-stupid-digest-assets'
 gem 'sass-rails',        git: 'https://github.com/guilleiguaran/sass-rails.git', branch: 'backport'
 gem 'sass',             '~> 3.4.12'
