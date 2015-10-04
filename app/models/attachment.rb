@@ -75,7 +75,7 @@ class Attachment < ActiveRecord::Base
   end
 
   def deletable?(user = User.current)
-    if User.current and @attachment.author_id == User.current.id
+    if container.attachments_deletable?(user) or author_id == user.id
       return true
     else
       return false
