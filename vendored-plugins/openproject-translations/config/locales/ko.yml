@@ -1,5 +1,6 @@
 ---
 ko:
+  ko: "한국어"
   account:
     delete: "계정 삭제"
     delete_confirmation: "이 계정을 정말로 삭제합니까?"

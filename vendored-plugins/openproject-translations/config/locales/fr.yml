@@ -1,5 +1,6 @@
 ---
 fr:
+  fr: Français
   account:
     delete: Supprimer le compte
     delete_confirmation: "Êtes-vous sûr de vouloir supprimer le compte ?"

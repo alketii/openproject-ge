@@ -27,6 +27,7 @@
 #++
 
 en:
+  en: "English"
   account:
     delete: "Delete account"
     delete_confirmation: "Are you sure you want to delete the account?"

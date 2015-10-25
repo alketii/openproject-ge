@@ -1,5 +1,6 @@
 ---
 zh-TW:
+  zh-TW: "繁體中文"
   account:
     delete: "刪除帳號"
     delete_confirmation: "您確定要刪除這個帳號嗎？"

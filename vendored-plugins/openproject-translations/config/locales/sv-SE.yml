@@ -1,5 +1,6 @@
 ---
 sv-SE:
+  sv-SE: Svenska
   account:
     delete: Ta bort konto
     delete_confirmation: "Är du säker du vill ta bort kontot?"

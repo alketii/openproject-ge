@@ -1,5 +1,6 @@
 ---
 id:
+  id: English
   account:
     delete: Hapus akun
     delete_confirmation: Yakin Anda ingin menghapus akun?

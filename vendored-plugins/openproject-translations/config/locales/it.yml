@@ -1,5 +1,6 @@
 ---
 it:
+  it: Italiano
   account:
     delete: Cancella account
     delete_confirmation: Sei davvero sicuro di voler cancellare questo account?

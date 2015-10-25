@@ -1,5 +1,6 @@
 ---
 tr:
+  tr: Türkçe
   account:
     delete: Hesabı sil
     delete_confirmation: Hesabını silmek istediğinden emin misin?

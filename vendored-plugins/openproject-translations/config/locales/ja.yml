@@ -1,5 +1,6 @@
 ---
 ja:
+  ja: "日本語"
   account:
     delete: "アカウントを削除"
     delete_confirmation: "アカウントを削除してもよろしいですか？"

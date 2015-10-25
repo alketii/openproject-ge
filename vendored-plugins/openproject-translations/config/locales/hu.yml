@@ -1,5 +1,6 @@
 ---
 hu:
+  hu: Magyar
   account:
     delete: Felhasználói hozzáférés törölése
     delete_confirmation: Biztosan törölni akarja ezt a felhasználói hozzáférést?

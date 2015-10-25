@@ -51,7 +51,33 @@ module Redmine::MenuManager::TopMenuHelper
 
     return '' if User.current.anonymous? and User.current.number_of_known_projects.zero?
 
-    heading = link_to l(:label_project_plural),
+    project = nil
+    lang = Setting.default_language
+    lang = find_language(User.current.language) if User.current.logged?
+
+    if params[:project_id].blank?
+      if !params[:id].blank?
+        ###############if /\A\d+\z/.match(params[:id])
+        if params[:controller] == "messages"
+          message = Message.find(params[:id])
+          board = Board.find(message.board_id)
+          project = Project.find(board.project_id)
+        end
+        if params[:controller] == "my_projects_overviews" or params[:controller] == "projects"
+          project = Project.find(params[:id])
+        end
+      end
+    else
+      project = Project.find(params[:project_id]) 
+    end
+    
+    if project
+      lang = find_language(project.display_language)
+    end
+    
+    #ink_to l(:label_project_plural)
+
+    heading = link_to l(lang),
                       { controller: '/projects',
                         action: 'index' },
                       title: l(:label_project_plural),

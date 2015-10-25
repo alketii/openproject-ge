@@ -1,5 +1,6 @@
 ---
 uk:
+  uk: "Українська"
   account:
     delete: "Видалити обліковий запис"
     delete_confirmation: Are you sure you want to delete the account?

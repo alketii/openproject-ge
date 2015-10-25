@@ -1,5 +1,6 @@
 ---
 si-LK:
+  si-LK: "සිංහල"
   account:
     delete: "ගිණුම මකන්න"
     delete_confirmation: Are you sure you want to delete the account?

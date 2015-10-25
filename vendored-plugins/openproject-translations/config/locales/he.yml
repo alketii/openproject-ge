@@ -1,5 +1,6 @@
 ---
 he:
+  he: "עברית"
   account:
     delete: "מחק חשבון"
     delete_confirmation: "האם אתה בטוח שברצונך למחוק את החשבון?"

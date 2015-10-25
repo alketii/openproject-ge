@@ -1,5 +1,6 @@
 ---
 cs:
+  cs: "Čeština"
   account:
     delete: Odstranit účet
     delete_confirmation: Jste si jisti, že chcete odstranit tento účet?

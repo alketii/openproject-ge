@@ -1,5 +1,6 @@
 ---
 da:
+  da: Dansk
   account:
     delete: Slet konto
     delete_confirmation: Er du sikker på, du vil slette denne konto?

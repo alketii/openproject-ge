@@ -1,5 +1,6 @@
 ---
 et:
+  et: Eesti
   account:
     delete: Kustuta konto
     delete_confirmation: Oled kindel, et tahad seda kontot kustutada?

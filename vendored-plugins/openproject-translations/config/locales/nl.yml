@@ -1,5 +1,6 @@
 ---
 nl:
+  nl: Nederlands
   account:
     delete: Account Verwijderen
     delete_confirmation: Weet je zeker dat je dit account wilt verwijderen?
