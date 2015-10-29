@@ -46,6 +46,15 @@ class Redmine::MenuManager::MenuItem < Redmine::MenuManager::TreeNode
     @html_options[:class] = [
       @html_options[:class], "#{@name.to_s.dasherize}-menu-item", 'ellipsis'
     ].compact.join(' ')
+    
+    # Ugly bugfix
+    @html_options[:class] = @html_options[:class].gsub("#{@name.to_s.dasherize}-
+menu-item ellipsis", "").split.join(" ")
+    @html_options[:class] = [
+      @html_options[:class], "#{@name.to_s.dasherize}-menu-item", 'ellipsis'
+    ].compact.join(' ')
+
+    
     @parent = options[:parent]
     @child_menus = options[:children]
     @last = options[:last] || false
